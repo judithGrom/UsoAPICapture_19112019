@@ -56,11 +56,13 @@
                 //Make sure we had a result; it should always be
                 //greater than 0, but you never know.
                 if(len > 0) {
+                    //Get a handle to the results area of the screen/page    
+                    res = document.getElementById("captureResults");
                     htmlStr = "<p>Results:</p><ol>";
                     for( i = 0, len; i < len; i += 1) {
                         //alert(fileList[i].fullPath);
-                        //htmlStr += '<li><a href="file:/' + fileList[i].fullPath + '">' + fileList[i].name + '</a></li>';
-                        htmlStr += '<li><a href="file:/' + fileList[i].fullPath; + '">' + '</a></li>';
+                        htmlStr += '<li><a href="file:/' + fileList[i].fullPath + '">' + fileList[i].name + '</a></li>';
+                        //htmlStr += '<li><a href="file:/' + fileList[i].fullPath; + '">' + '</a></li>';
                     }
                     htmlStr += "</ol>";
                     //Set the results content
